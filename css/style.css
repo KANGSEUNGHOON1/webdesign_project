@@ -8,10 +8,19 @@ ul,
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
 .wrap {
   width: 100%;
   max-width: 1920px;
   margin: auto;
+  position: relative;
 }
 /*헤더*/
 header {
@@ -59,16 +68,201 @@ header {
   margin-top: 10px;
   width: 80%;
 }
-
-/* 비주얼 영역*/
-.visual1 {
+/*메인 1*/
+.main1 {
   width: 100%;
   height: 830px;
+  padding-top: 50px;
   background: url(../images/headerbg.png);
 }
-.visual1-main > a > img {
-    width: 80%;
+/* 메인 1 스와이프*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide > a > img {
+  display: block;
+  width: 80%;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.swiper-pagination {
+  display: block;
+  height: 13%;
+}
+/*메인 1 서브1*/
+.main1-sub1 {
+  display: block;
+  position: absolute;
+  top: 20%;
+  right: 13%;
+  width: 16%;
+  min-width: 310px;
+  height: 33%;
+  min-height: 320px;
+  border-radius: 30px;
+  background-color: #224ed1;
+  z-index: 9;
+}
+.main1-sub1 > a > img {
+  display: block;
+  position: absolute;
+  top: -5%;
+  right: 6%;
+  width: 90%;
+}
+.main1-sub1 > span {
+  display: block;
+  position: absolute;
+  top: 80%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/*메인 1 서브2*/
+.main1-sub2 {
+  display: block;
+  position: absolute;
+  top: 55%;
+  right: 13%;
+  width: 16%;
+  min-width: 310px;
+  height: 20%;
+  min-height: 160px;
+  border-radius: 30px;
+  background-color: #ee1b24;
+  z-index: 9;
+}
+.main1-sub2 > a > img {
+  display: block;
+  position: absolute;
+  top: -10%;
+  right: -2%;
+  width: 65%;
+}
+.main1-sub2 > span {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/*메인 1 서브3*/
+.main1-sub3 {
+  display: block;
+  position: absolute;
+  top: 76%;
+  right: 13%;
+  width: 16%;
+  min-width: 310px;
+  height: 8%;
+  min-height: 50px;
+  border-radius: 30px;
+  background-color: #c43663;
+  z-index: 9;
+}
+.main1-sub3 > a > span {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 16%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/*메인 2*/
+.main2 {
+  width: 100%;
+  background-color: #f8f4f1;
+  padding-bottom: 60px;
+}
+.main2-txt {
+  padding: 50px;
+}
+.main2-txt > h1 {
+  color: #f06a00;
+  font-size: 42px;
+}
+.main2-txt > span {
+  padding-top: 5px;
+  font-weight: 400;
+}
+.main2 .inner > a {
   display: block;
   margin: auto;
-  padding-top: 50px;
+  width: 100%;
+  max-width: 960px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.main2 > .inner > a > img {
+  width: 100%;
+}
+/*메인 3*/
+.main3 {
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+.main3-txt {
+  padding: 50px;
+}
+.main3-txt > h2 {
+  color: #f06a00;
+  font-size: 42px;
+}
+.main3-txt > span {
+  padding-top: 5px;
+  font-weight: 400;
+}
+.main3-menu {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+.main3-menu li {
+  width: calc((100% - 10px) / 5);
+}
+.main3-menu li a {
+  position: relative;
+}
+.main3-bg {
+  width: 100%;
+}
+.main3-item {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.main3-item:hover {
+  width: 105%;
+}
+/*메인 4*/
+.main4{
+  width: 100%;
+  background-color: #f8f4f1;
+}
+.main4-txt {
+  padding: 50px;
+}
+.main4-txt > h3 {
+  color: #f06a00;
+  font-size: 42px;
+}
+.main4-txt > span {
+  padding-top: 5px;
+  font-weight: 400;
 }

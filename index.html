@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개인프로젝트 웹디자인</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="wrap">
@@ -30,17 +32,147 @@
           </ul>
         </div>
       </header>
-      <!-- 비주얼 영역-->
-      <div class="visual1">
-        <div class="visual1-main">
-          <a href="#">
-            <img src="images/headervs01.png" alt="비주얼" />
-          </a>
+      <!--스와이프 메인1-->
+      <div class="main1">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/headervs01.png" alt="vs1" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/headervs02.png" alt="vs2" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/headervs03.png" alt="vs3" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/headervs04.png" alt="vs4" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="visual1-sub1"></div>
-        <div class="visual1-sub2"></div>
-        <div class="visual1-sub3"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!--메인1 서브-->
+      <!--서브1-->
+      <div class="main1-sub1">
+        <a href="#">
+          <img src="images/main1_sub1_img.png" alt="서브1" />
+        </a>
+        <span>블루베리 크림치즈필드</span>
+      </div>
+      <!--서브2-->
+      <div class="main1-sub2">
+        <a href="#">
+          <img src="images/main1_sub2_img.png" alt="서브2" />
+        </a>
+        <span>윈터 블렌드 <br />아메리카노</span>
+      </div>
+      <!--서브3-->
+      <div class="main1-sub3">
+        <a href="#">
+          <span>DUNKIN' OF MONTH</span>
+        </a>
       </div>
     </div>
+    <!--메인2-->
+    <div class="main2">
+      <div class="inner">
+        <div class="main2-txt">
+          <h1>DUNKIN' NEW & EVENT</h1>
+          <span>던킨의 다양한 혜택과 이벤트 그리고 신제품</span>
+        </div>
+
+        <a href="#">
+          <img src="images/main2img.png" alt="메인2" />
+        </a>
+      </div>
+    </div>
+    <!--메인3-->
+    <div class="main3">
+      <div class="inner">
+        <div class="main3-txt">
+          <h2>DUNKIN' MENU</h2>
+          <span>던킨의 메뉴를 소개합니다</span>
+        </div>
+
+        <ul class="main3-menu">
+          <li>
+            <a href="#">
+              <img src="images/main3_fr01.png" alt="3프레임-1" class="main3-bg" />
+              <img src="images/main3_01.png" alt="3-1" class="main3-item" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main3_fr02.png" alt="3프레임-2" class="main3-bg" />
+              <img src="images/main3_02.png" alt="3-2" class="main3-item" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main3_fr03.png" alt="3프레임-3" class="main3-bg" />
+              <img src="images/main3_03.png" alt="3-3" class="main3-item" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main3_fr04.png" alt="3프레임-4" class="main3-bg" />
+              <img src="images/main3_04.png" alt="3-4" class="main3-item" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main3_fr05.png" alt="3프레임-5" class="main3-bg" />
+              <img src="images/main3_05.png" alt="3-5" class="main3-item" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--메인4-->
+    <div class="main4">
+      <div class="inner">
+        <div class="main4-txt">
+          <h3>WITH DUNKIN'</h3>
+          <span>던킨을 더 가까이에서 만나보세요</span>
+        </div>
+        <div class="ul main4-menu">
+          <li>
+            <a href="#"> </a>
+          </li>
+        </div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
