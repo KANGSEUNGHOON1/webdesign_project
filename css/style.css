@@ -16,40 +16,42 @@ a {
   margin: auto;
   text-align: center;
 }
-/* .wrap {
-  width: 100%;
+.wrap {
   max-width: 1920px;
   margin: auto;
   position: relative;
-} */
+}
 /*헤더*/
 header {
   width: 100%;
+  height: 100%;
 }
 /*상단바*/
 .top-bar {
-  /* width: 100%; */
-  height: 112px;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
+  height: 112px;
   background: url("../images/topbar.png") no-repeat;
 }
 .bar-bg {
   width: 100%;
-  height: 112px;
+  height: 100%;
   overflow: hidden;
-  height: 112px;
 }
 .top-logo {
+  /* width: 496px; */
   width: 26%;
   position: absolute;
   top: 0;
+  /* left: calc((100% - 496px) / 2); */
   left: calc((100% - 26%) / 2);
 }
 .top-bar > ul {
   width: 37%;
-  height: 112px;
+  height: 100%;
   justify-content: space-evenly;
   display: flex;
   align-items: center;
@@ -101,28 +103,28 @@ header {
 /*메인 1 서브1*/
 .main1-sub1 {
   display: block;
-  /* position: absolute; */
+  position: absolute;
   float: right;
-  top: 0%;
-  right: 0%;
+  top: 19%;
+  right: 13%;
   width: 16%;
   min-width: 310px;
   height: 33%;
   min-height: 320px;
   border-radius: 30px;
   background-color: #224ed1;
-  
+  z-index: 9;
 }
 .main1-sub1 > a > img {
   display: block;
-  /* position: absolute; */
+  position: absolute;
   top: -5%;
   right: 6%;
   width: 90%;
 }
 .main1-sub1 > span {
   display: block;
-  /* position: absolute; */
+  position: absolute;
   top: 80%;
   left: 16%;
   font-size: 20px;
@@ -331,10 +333,79 @@ header {
   justify-content: space-between;
 }
 /*반응형*/
+@media screen and (max-width: 1650px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 80%;
+    right: 10%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 65%;
+    right: 8%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 60%;
+    right: 7%;
+  }
+  .top-menu-left,
+  .top-menu-right {
+    scale: 90%;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 57%;
+    right: 6%;
+  }
+  .top-menu-left,
+  .top-menu-right {
+    scale: 87%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 53%;
+    right: 5%;
+  }
+  .top-menu-left,
+  .top-menu-right {
+    scale: 84%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .main1-sub1,
+  .main1-sub2,
+  .main1-sub3 {
+    scale: 48%;
+    right: 5%;
+  }
+  .top-menu-left,
+  .top-menu-right {
+    scale: 80%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
+    scale: 40%;
+  }
+  .top-menu-left,
+  .top-menu-right {
     display: none;
   }
 }
