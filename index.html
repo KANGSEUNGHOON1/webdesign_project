@@ -3,10 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- seo 엔진 최적화 -->
+    <!-- 웹페이지의 설명을 정의 -->
+    <meta name="description" content="개인 프로젝트 던킨 큰론 코딩 중" />
+    <!-- 웹페이지와 관련된 키워드를 정의 -->
+    <meta name="keywords" content="던킨, 클론" />
+    <!-- 웹페이지의 저자를 정의  -->
+    <meta name="author" content="강승훈" />
+    <!-- 소셜 미디어에서 페이지가 공유될때 사용되는 제목 -->
+    <meta property="og:title" content="던킨" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 사이트 이름 -->
+    <meta property="og:site_name" content="던킨 클론" />
+    <!-- 소셜 미디어에서 페이지가 웹사이트임을 명시 -->
+    <meta property="og:type" content="website" />
+    <!-- Open Graph 프로토콜에서 사용되는 메타 태그의 속성 중 하나로, 페이지의 간략한 설명을 제공하는 데 사용 -->
+    <!-- 소셜 미디어에서 공유될 때 사용되는 URL -->
+    <meta property="og:url" content="https://kangseunghoon1.github.io/webdesign_project/" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 이미지 -->
+    <meta property="og:image" content="" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
+    <meta property="og:description" content="던킨 클론 웹사이트입니다." />
     <title>개인프로젝트 웹디자인</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -34,7 +58,7 @@
       </header>
       <!--스와이프 메인1-->
       <div class="main1">
-        <div class="swiper mySwiper">
+        <div class="swiper main1Swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#">
@@ -59,29 +83,51 @@
           </div>
         </div>
         <div class="swiper-pagination"></div>
-      <!--메인1 서브-->
-      <!--서브1-->
-      <div class="main1-sub1">
-        <a href="#">
-          <img src="images/main1_sub1_img.png" alt="서브1" />
-        </a>
-        <span>블루베리 크림치즈필드</span>
+        <!--메인1 서브-->
+        <!--서브1-->
+        <div class="main1-sub1">
+          <a href="#">
+            <img src="images/main1_sub1_img.png" alt="서브1" />
+          </a>
+          <span>블루베리 크림치즈필드</span>
+        </div>
+        <!--서브2-->
+        <div class="main1-sub2">
+          <a href="#">
+            <img src="images/main1_sub2_img.png" alt="서브2" />
+          </a>
+          <span>윈터 블렌드 <br />아메리카노</span>
+        </div>
+        <!--서브3-->
+        <div class="main1-sub3">
+          <a href="#">
+            <span>DUNKIN' OF MONTH</span>
+          </a>
+        </div>
+        <!--모바일용 서브-->
+        <div class="mb-main1-sub">
+          <!--서브1-->
+          <div class="mb-main1-sub1">
+            <a href="#">
+              <img src="images/main1_sub1_img.png" alt="서브1" />
+            </a>
+            <span>블루베리 크림치즈필드</span>
+          </div>
+          <!--서브2-->
+          <div class="mb-main1-sub2">
+            <a href="#">
+              <img src="images/main1_sub2_img.png" alt="서브2" />
+            </a>
+            <span>윈터 블렌드 <br />아메리카노</span>
+          </div>
+          <!--서브3-->
+          <div class="mb-main1-sub3">
+            <a href="#">
+              <span>DUNKIN' OF MONTH</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <!--서브2-->
-      <div class="main1-sub2">
-        <a href="#">
-          <img src="images/main1_sub2_img.png" alt="서브2" />
-        </a>
-        <span>윈터 블렌드 <br />아메리카노</span>
-      </div>
-      <!--서브3-->
-      <div class="main1-sub3">
-        <a href="#">
-          <span>DUNKIN' OF MONTH</span>
-        </a>
-      </div>
-      </div>
-      
     </div>
     <!--메인2-->
     <div class="main2">
@@ -145,7 +191,7 @@
           <h3>WITH DUNKIN'</h3>
           <span>던킨을 더 가까이에서 만나보세요</span>
         </div>
-        <ul class="main4-menu">
+        <!-- <ul class="main4-menu">
           <li>
             <a href="#"> <img src="images/order.png" alt="order" /> </a>
             <span>ORDER</span>
@@ -161,7 +207,27 @@
             <span>BRAND</span>
             <p>던킨이 전하고 싶은 이야기</p>
           </li>
-        </ul>
+        </ul> -->
+        <!-- Swiper -->
+        <div class="swiper main4Swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"> <img src="images/order.png" alt="order" /> </a>
+              <span>ORDER</span>
+              <p>쉽고 빠르게 만나는 던킨</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"> <img src="images/store.png" alt="store" /> </a>
+              <span>STORE</span>
+              <p>나와 가장 가까운 던킨 찾기</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"> <img src="images/brand.png" alt="brand" /> </a>
+              <span>BRAND</span>
+              <p>던킨이 전하고 싶은 이야기</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!--footer-->
@@ -196,12 +262,10 @@
         </ul>
       </div>
     </footer>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- main1 Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".main1Swiper", {
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
@@ -218,6 +282,10 @@
           prevEl: ".swiper-button-prev",
         },
       });
+    </script>
+    <!-- main4 Swiper -->
+    <script>
+      var swiper = new Swiper(".main4Swiper", {});
     </script>
   </body>
 </html>

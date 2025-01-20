@@ -24,7 +24,7 @@ a {
 /*헤더*/
 header {
   width: 100%;
-  height: 100%;
+  height: 112px;
 }
 /*상단바*/
 .top-bar {
@@ -33,7 +33,7 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 112px;
+  height: 100%;
   background: url("../images/topbar.png") no-repeat;
 }
 .bar-bg {
@@ -63,6 +63,10 @@ header {
   font-size: 20px;
   font-weight: bold;
 }
+.top-menu-right,
+.top-menu-left {
+  display: block;
+}
 .top-menu-right > li > a {
   width: 100%;
 }
@@ -79,19 +83,20 @@ header {
   background: url(../images/headerbg.png);
 }
 /* 메인 1 스와이프*/
-.swiper {
+.swiper .main1Swiper {
   width: 100%;
 }
-.swiper-slide {
+.main1Swiper .swiper-slide {
+  width: 100%;
   text-align: center;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.swiper-slide > a > img {
+.main1Swiper .swiper-slide > a > img {
   display: block;
-  width: 80%;
+  width: 100%;
   margin: auto;
   object-fit: cover;
   border-radius: 40px;
@@ -237,6 +242,7 @@ header {
 }
 .main3-menu li {
   width: calc((100% - 10px) / 5);
+  min-width: 100px;
 }
 .main3-menu li a {
   position: relative;
@@ -270,20 +276,21 @@ header {
   padding-top: 5px;
   font-weight: 400;
 }
-.main4-menu {
+/*메인 4스와이퍼*/
+.swiper .main4-menu {
   width: 100%;
   display: flex;
-  /* justify-content: space-evenly; */
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between
+
 }
-.main4-menu li {
+.main4Swiper .swiper-slide {
   width: 300px;
+  gap: 20px ;
   height: 400px;
   border-radius: 30px;
   background-color: #fff;
 }
-.main4-menu a {
+.main4Swiper a {
   display: block;
   width: 280px;
   height: 280px;
@@ -292,15 +299,15 @@ header {
   margin: auto;
   margin-top: 10px;
 }
-.main4-menu img {
+.main4Swiper img {
   display: block;
   width: 100%;
   transition: all 0.5s;
 }
-.main4-menu img:hover {
+.main4Swiper img:hover {
   scale: 115%;
 }
-.main4-menu span {
+.main4Swiper span {
   display: block;
   color: #333;
   padding: 5px;
@@ -332,29 +339,95 @@ header {
   display: flex;
   justify-content: space-between;
 }
+/*모바일*/
+.mb-main1-sub {
+  display: none;
+}
+/*모바일 메인 1 서브1*/
+.mb-main1-sub1 {
+  display: block;
+  margin: 30px auto;
+  width: 310px;
+  height: 320px;
+  border-radius: 30px;
+  background-color: #224ed1;
+  z-index: 9;
+}
+.mb-main1-sub1 > a > img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+.mb-main1-sub1 > span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/*모바일 메인 1 서브2*/
+.mb-main1-sub2 {
+  display: block;
+  margin: 30px auto;
+  width: 310px;
+  height: 320px;
+  border-radius: 30px;
+  background-color: #ee1b24;
+  z-index: 9;
+}
+.mb-main1-sub2 > a > img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+.mb-main1-sub2 > span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/*모바일 메인 1 서브3*/
+.mb-main1-sub3 {
+  display: block;
+  width: 310px;
+  height: 50px;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #c43663;
+  z-index: 9;
+}
+.mb-main1-sub3 > a > span {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
 /*반응형*/
 @media screen and (max-width: 1650px) {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 80%;
-    right: 10%;
+    scale: 85%;
+    right: 5%;
   }
 }
 @media screen and (max-width: 1350px) {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 65%;
-    right: 8%;
+    scale: 80%;
+    right: 4%;
   }
 }
 @media screen and (max-width: 1100px) {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 60%;
-    right: 7%;
+    scale: 75%;
+    right: 2%;
   }
   .top-menu-left,
   .top-menu-right {
@@ -365,8 +438,8 @@ header {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 57%;
-    right: 6%;
+    scale: 70%;
+    right: 1%;
   }
   .top-menu-left,
   .top-menu-right {
@@ -377,24 +450,19 @@ header {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 53%;
-    right: 5%;
+    scale: 60%;
+    right: 1%;
   }
-  .top-menu-left,
-  .top-menu-right {
-    scale: 84%;
+  .top-bar ul {
+    display: none;
   }
 }
 @media screen and (max-width: 890px) {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 48%;
-    right: 5%;
-  }
-  .top-menu-left,
-  .top-menu-right {
-    scale: 80%;
+    scale: 60%;
+    right: 1%;
   }
 }
 
@@ -402,10 +470,9 @@ header {
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
-    scale: 40%;
-  }
-  .top-menu-left,
-  .top-menu-right {
     display: none;
+  }
+  .mb-main1-sub {
+    display: block;
   }
 }
