@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -22,42 +23,38 @@ html {
 /*헤더*/
 header {
   width: 100%;
-  /* height: 112px; */
 }
 /*상단바*/
 .top-bar {
   width: 100%;
-
+  height: 112px;
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 100%;
   background: url("../images/topbar.png") no-repeat;
 }
-.bar-bg {
+/* .bar-bg {
   width: 100%;
-
-  overflow: hidden;
-}
+} */
 .top-logo {
-  width: 21%;
+  width: 36%;
   position: absolute;
-  top: 0;
-  left: calc((100% - 21%) / 2);
+  top: 0%;
+  z-index: 9;
+  left: calc((100% - 36%) / 2);
 }
 .top-bar > ul {
-  width: 40%;
-
+  width: 30%;
   justify-content: space-evenly;
   display: flex;
   align-items: center;
 }
 
 .top-bar > ul > li {
-  line-height: 112px;
   display: block;
   font-size: 1.5rem;
   font-weight: bold;
+  font-family: "Lilita One", serif;
 }
 .top-menu-right,
 .top-menu-left {
@@ -70,10 +67,16 @@ header {
   margin-top: 10px;
   width: 80%;
 }
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
 /*메인 1*/
 .main1 {
   width: 100%;
-
+  position: relative;
   padding-top: 50px;
   padding-bottom: 70px;
   background: url(../images/headerbg.png);
@@ -95,15 +98,21 @@ header {
   border-radius: 40px;
 }
 
+.sub-menu {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
 /*메인 1 서브1*/
 .main1-sub1 {
   display: block;
   position: absolute;
-  float: right;
-  top: 15%;
-  right: 18%;
-  width: 15%;
-  height: 32%;
+  top: 11%;
+  right: 12%;
+  width: 20%;
+  height: 44%;
   border-radius: 30px;
   background-color: #224ed1;
   z-index: 9;
@@ -115,22 +124,22 @@ header {
   right: 6%;
   width: 90%;
 }
-.main1-sub1 > span {
+.main1-sub1 > a > span {
   display: block;
-  position: absolute;
-  top: 80%;
-  left: 19%;
-  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 78%;
+  font-size: 140%;
   font-weight: bold;
   color: #fff;
 }
 /*메인 1 서브2*/
+
 .main1-sub2 {
   display: block;
   position: absolute;
-  top: 48%;
-  right: 18%;
-  width: 15%;
+  top: 57%;
+  right: 12%;
+  width: 20%;
   height: 18%;
   border-radius: 30px;
   background-color: #ee1b24;
@@ -138,17 +147,17 @@ header {
 }
 .main1-sub2 > a > img {
   display: block;
-  position: absolute;
+  /* position: absolute;
   top: -10%;
-  right: -2%;
-  width: 65%;
+  right: -2%; */
+  width: 40%;
 }
-.main1-sub2 > span {
+.main1-sub2 > a > span {
   display: block;
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  font-size: 1.5rem;
+
+  margin-top: -27%;
+  margin-left: 45%;
+  font-size: 140%;
   font-weight: bold;
   color: #fff;
 }
@@ -156,9 +165,9 @@ header {
 .main1-sub3 {
   display: block;
   position: absolute;
-  top: 67%;
-  right: 18%;
-  width: 15%;
+  top: 77%;
+  right: 12%;
+  width: 20%;
   height: 6%;
   border-radius: 30px;
   background-color: #c43663;
@@ -166,10 +175,9 @@ header {
 }
 .main1-sub3 > a > span {
   display: block;
-  position: absolute;
-  top: 30%;
-  left: 16%;
-  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2.5%;
+  font-size: 140%;
   font-weight: bold;
   color: #fff;
 }
@@ -213,6 +221,7 @@ header {
 h2 {
   color: #f06a00;
   font-size: 4rem;
+  font-family: "Lilita One", serif;
 }
 .main3-txt > span {
   padding-top: 5px;
@@ -239,9 +248,11 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  vertical-align: middle;
 }
 .main3-item:hover {
-  scale: 105%;
+  scale: 110%;
+  transform: translateX(-45%);
 }
 /*메인 4*/
 .main4 {
@@ -251,6 +262,9 @@ h2 {
 }
 .main4 .inner {
   width: 70%;
+}
+.main4-txt > h2 {
+  white-space: nowrap;
 }
 .main4-txt {
   padding: 50px;
@@ -313,15 +327,32 @@ h2 {
   justify-content: space-between;
 }
 /*모바일*/
+.top-logo-mb {
+  display: none;
+  z-index: 9;
+  width: 35%;
+  position: absolute;
+  top: 0%;
+  left: calc((100% - 35%) / 2);
+}
 .mb-main1-sub {
   display: none;
+}
+.swiper.main1mbSwiper {
+  display: none;
+}
+.swiper.main1mbSwiper img {
+  width: 80%;
+  margin: auto;
+  display: block;
+  border-radius: 30px;
 }
 /*모바일 메인 1 서브1*/
 .mb-main1-sub1 {
   display: block;
   margin: 30px auto;
-  width: 310px;
-  height: 320px;
+  width: 80%;
+  height: 100%px;
   border-radius: 30px;
   background-color: #224ed1;
   z-index: 9;
@@ -331,9 +362,11 @@ h2 {
   margin: auto;
   width: 80%;
 }
-.mb-main1-sub1 > span {
+.mb-main1-sub1 > a > span {
   display: block;
   text-align: center;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -342,8 +375,8 @@ h2 {
 .mb-main1-sub2 {
   display: block;
   margin: 30px auto;
-  width: 310px;
-  height: 320px;
+  width: 80%;
+  height: 30%;
   border-radius: 30px;
   background-color: #ee1b24;
   z-index: 9;
@@ -351,11 +384,12 @@ h2 {
 .mb-main1-sub2 > a > img {
   display: block;
   margin: auto;
-  width: 80%;
+  width: 50%;
 }
-.mb-main1-sub2 > span {
+.mb-main1-sub2 > a > span {
   display: block;
   text-align: center;
+  padding-bottom: 5%;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -363,8 +397,8 @@ h2 {
 /*모바일 메인 1 서브3*/
 .mb-main1-sub3 {
   display: block;
-  width: 310px;
-  height: 50px;
+  width: 80%;
+  height: 10%;
   margin: auto;
   border-radius: 30px;
   z-index: 9;
@@ -378,8 +412,40 @@ h2 {
   font-weight: bold;
   color: #fff;
 }
+/*모바일 footer*/
+.mb_footer {
+  margin: auto;
+  width: 80%;
+  max-width: 1700px;
+  display: none;
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 25px;
+  color: #6f6f6f;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.mb_footer_bt {
+  display: block;
+}
+.mb_footer_bt ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
 /*반응형*/
+@media screen and (max-width: 1450px) {
+  .top-logo-mb {
+    display: block;
+  }
+  .top-logo {
+    display: none;
+  }
+}
 @media screen and (max-width: 1100px) {
+  .top-bar {
+    height: 84px;
+  }
   .top-bar > ul > li {
     font-size: 1rem;
   }
@@ -388,6 +454,18 @@ h2 {
   }
 }
 @media screen and (max-width: 768px) {
+  .top-bar {
+    height: 60px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .swiper.main1mbSwiper {
+    display: block;
+  }
+  .swiper.main1Swiper {
+    display: none;
+  }
   .main1-sub1,
   .main1-sub2,
   .main1-sub3 {
@@ -399,7 +477,18 @@ h2 {
   .top-bar > ul > li {
     display: none;
   }
+  .main2 img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
   h2 {
     font-size: 2.5rem;
+  }
+  .footer {
+    display: none;
+  }
+  .mb_footer {
+    display: block;
   }
 }

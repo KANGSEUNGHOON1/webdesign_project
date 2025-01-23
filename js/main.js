@@ -8,6 +8,15 @@ window.onload = function () {
       disableOnInteraction: false,
     },
   });
+  /* 스와이퍼 1 모바일 */
+  const mainmbSwiper = new Swiper(".main1mbSwiper", {
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
   /* 스와이퍼 3 */
   const menuSwiper = new Swiper(".main3Swiper", {
     loop: true,
