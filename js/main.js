@@ -19,7 +19,7 @@ window.onload = function () {
   });
   /* 스와이퍼 3 */
   const menuSwiper = new Swiper(".main3Swiper", {
-    loop: true,
+    
     slidesPerView: 3,
     spaceBetween: 20,
 
@@ -36,7 +36,7 @@ window.onload = function () {
   });
   /* 스와이퍼 4 */
   const itemSwiper = new Swiper(".main4Swiper", {
-    loop: true,
+    
     slidesPerView: 1.5,
     spaceBetween: 20,
 

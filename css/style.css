@@ -55,6 +55,10 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   font-family: "Lilita One", serif;
+  color: #333;
+}
+.top-bar > ul > li:hover {
+  color: #c43663;
 }
 .top-menu-right,
 .top-menu-left {
@@ -73,6 +77,31 @@ header {
   top: 20%;
   right: 5%;
 }
+.header {
+  position: relative;
+}
+.bar-hover {
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+  display: block;
+  position: absolute;
+  top: -100px;
+  z-index: 99;
+}
+.bar-hover > ul {
+  display: flex;
+  margin-left: 16%;
+}
+.bar-hover > ul > li {
+  display: block;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 20px;
+  color: #333;
+}
+
 /*메인 1*/
 .main1 {
   width: 100%;
@@ -399,7 +428,7 @@ h2 {
   display: block;
   width: 80%;
   height: 10%;
-  margin: auto;
+  margin: 30px auto;
   border-radius: 30px;
   z-index: 9;
   background-color: #c43663;
@@ -441,6 +470,9 @@ h2 {
   .top-logo {
     display: none;
   }
+  .sub-menu a span {
+    font-size: 120%;
+  }
 }
 @media screen and (max-width: 1100px) {
   .top-bar {
@@ -451,6 +483,14 @@ h2 {
   }
   h2 {
     font-size: 3rem;
+  }
+  .sub-menu a span {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sub-menu a span {
+    font-size: 90%;
   }
 }
 @media screen and (max-width: 768px) {
