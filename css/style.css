@@ -19,7 +19,6 @@ a {
 }
 html {
   font-size: 15px;
-  
 }
 /*헤더*/
 header {
@@ -314,13 +313,12 @@ h2 {
   font-size: 35px;
   font-weight: bold;
 }
-.main4Swiper p{
+.main4Swiper p {
   white-space: nowrap;
   margin: auto;
   text-align: center;
   display: block;
-  background-color: #224ed1;
-} 
+}
 /*footer*/
 .footer {
   margin: auto;
@@ -368,8 +366,8 @@ h2 {
   border-radius: 30px;
 }
 /*모바일 메인 1 서브1*/
-.sub-menu{
-  padding-bottom: 50px , 0px;
+.sub-menu {
+  padding-bottom: 50px, 0px;
 }
 .mb-main1-sub1 {
   display: block;
@@ -440,7 +438,7 @@ h2 {
   margin: auto;
   width: 80%;
   max-width: 1700px;
-  display: none;
+  /* display: none; */
   background-color: #fff;
   font-size: 13px;
   line-height: 25px;
@@ -448,8 +446,11 @@ h2 {
   padding-top: 50px;
   padding-bottom: 40px;
 }
+.mb_footer_top {
+  display: none;
+}
 .mb_footer_bt {
-  display: block;
+  display: none;
 }
 .mb_footer_bt ul {
   display: flex;
@@ -525,7 +526,10 @@ h2 {
   .footer {
     display: none;
   }
-  .mb_footer {
+  .mb_footer_top {
+    display: block;
+  }
+  .mb_footer_bt {
     display: block;
   }
 }
@@ -534,7 +538,8 @@ h2 {
     width: 50%;
     left: calc((100% - 50%) / 2);
   }
-  .main4Swiper span , .main4Swiper p {
+  .main4Swiper span,
+  .main4Swiper p {
     scale: 90%;
   }
 }
@@ -543,9 +548,24 @@ h2 {
     width: 65%;
     left: calc((100% - 65%) / 2);
   }
-  .main4Swiper span , .main4Swiper p {
+  .main4Swiper span {
     scale: 70%;
-    
   }
- 
+  .main4Swiper p {
+    scale: 70%;
+    margin: 0px -40px;
+  }
+  .main4-txt > h2 {
+    margin: 0px -40px;
+  }
+
+  .main4-txt > span {
+    margin: 0px -30px;
+  }
+  .mb_footer_top_p {
+    white-space: nowrap;
+  }
+  .mb_footer_bt {
+    display: none;
+  }
 }
