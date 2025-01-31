@@ -20,10 +20,14 @@ window.onload = function () {
   /* 스와이퍼 3 */
   const menuSwiper = new Swiper(".main3Swiper", {
     
-    slidesPerView: 3,
+    slidesPerView: 1.7,
     spaceBetween: 20,
 
     breakpoints: {
+      390: {
+        slidesPerView: 2.7,
+        spaceBetween: 20,
+      },
       768: {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -37,12 +41,12 @@ window.onload = function () {
   /* 스와이퍼 4 */
   const itemSwiper = new Swiper(".main4Swiper", {
     
-    slidesPerView: 1.5,
+    slidesPerView: 1.7,
     spaceBetween: 20,
 
     breakpoints: {
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 2.7,
         spaceBetween: 20,
       },
       1050: {
