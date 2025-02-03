@@ -31,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/main.js"></script>
-    <script src="js/menu.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
   </head>
   <body>
     <!-- <div class="wrap"> -->
@@ -43,15 +43,44 @@
 
         <ul class="top-menu-left">
           <li>DUNKIN'S OF MONTH</li>
-          <li class="brandhv">BRAND</li>
-          <li>MENU</li>
+          <li class="brandhv">
+            BRAND
+
+            <ul class="brandhv-list">
+              <li>HISTORY</li>
+              <li>DD COMMITMENT</li>
+            </ul>
+          </li>
+          <li class="menuhv">
+            MENU
+            <ul class="menuhv-list">
+              <li>DONUT</li>
+              <li>FOOD</li>
+              <li>COFFEE</li>
+              <li>BEVERAGE</li>
+              <li>SNACK & MORE</li>
+            </ul>
+          </li>
         </ul>
         <a href="#"><img src="images/pc_logo.png" alt="던킨로고" class="top-logo" /></a>
         <a href="#"><img src="images/mb_logo.png" alt="던킨로고" class="top-logo-mb" /></a>
         <ul class="top-menu-right">
-          <li>EVENT</li>
+          <li class="eventhv">
+            EVENT
+            <ul class="eventhv-list">
+              <li>프로모션</li>
+              <li>제휴혜택</li>
+            </ul>
+          </li>
           <li>STORE</li>
-          <li>ORDER</li>
+          <li class="orderhv">
+            ORDER
+            <ul class="orderhv-list">
+              <li>케이터링</li>
+              <li>딜리버리</li>
+              <li>선물하기</li>
+            </ul>
+          </li>
           <li>
             <a href="#"><img src="images/topbtn.png" alt="창업문의" class="top-btn" /></a>
           </li>
@@ -59,6 +88,8 @@
         <a href="#" class="hamburger">
           <img src="images/hamburger.svg" alt="메뉴바" />
         </a>
+
+        <!--상단바 호버-->
       </div>
     </header>
     <!--스와이프 메인1-->
@@ -312,6 +343,8 @@
         </ul>
       </div>
     </footer>
+    <!--클릭 or 호버 메뉴창-->
+    <!--햄버거 바 클릭 메뉴창-->
     <div class="hamburger-menu-wrap">
       <div class="hamburger-menu-main">
         <ul>
