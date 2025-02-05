@@ -662,6 +662,7 @@ h2 {
 }
 /*상세페이지*/
 .bbmain {
+  display: block;
   width: 100%;
   margin-bottom: 100px;
 }
@@ -711,13 +712,23 @@ h2 {
   font-size: 1.3rem;
 }
 .info {
-  display: inline-block;
-  margin: auto;
-  background-color: #224ed1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; /* 세로로 정렬 */
 }
 .info ul {
   display: flex;
 }
 .info ul li {
+  display: block;
   padding: 10px;
+  width: 130px;
+}
+.infost {
+  background-color: rgb(247, 240, 230);
+}
+.infond {
+  background-color: rgb(254, 252, 248);
 }
